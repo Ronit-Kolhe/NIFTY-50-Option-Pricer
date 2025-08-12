@@ -29,9 +29,11 @@ Create a virtual environment (recommended):
 python -m venv venv
 source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
 
+
 Install the dependencies:
 
 pip install -r requirements.txt
+
 
 How to Run the Script
 Configure the option parameters inside the option_pricer.py script. You can set the STRIKE_PRICE and EXPIRATION_DATE to match the option you want to analyze.
@@ -40,9 +42,11 @@ Configure the option parameters inside the option_pricer.py script. You can set 
 STRIKE_PRICE = 24000.0
 EXPIRATION_DATE = date(2025, 8, 28)
 
+
 Execute the script from your terminal:
 
 python option_pricer.py
+
 
 The script will output the analysis, including all the model inputs and the final theoretical option price.
 
@@ -55,3 +59,4 @@ Risk-Free Rate (r): 7.00%
 Annualized Volatility (sigma): 14.50%
 ------------------------------------------
 Theoretical Call Option Price: ₹ 2245.78
+
