@@ -1,54 +1,52 @@
-NIFTY 50 Option Pricer
-This project contains a Python script to calculate the theoretical price of a NIFTY 50 European call option using the Black-Scholes model. It fetches live market data for the NIFTY 50 index and calculates its historical volatility to provide a real-time theoretical valuation.
+# 📈 NIFTY 50 Option Pricer
 
-Features
-Black-Scholes Model: Implements the standard formula for European call options.
+A Python-based tool to calculate the **theoretical price of a NIFTY 50 European Call Option** using the **Black-Scholes Model**.  
+The script fetches **live NIFTY 50 market data** and calculates **historical volatility** to provide a real-time theoretical valuation.
 
-Live Data: Fetches the current spot price of the NIFTY 50 index from Yahoo Finance.
+---
 
-Historical Volatility: Automatically calculates the annualized historical volatility based on the last year of NIFTY 50 data.
+## ✨ Features
 
-Configurable: Easily change the strike price and expiration date directly in the script to analyze different options.
+- **Black-Scholes Model**: Implements the standard formula for European call options.
+- **Live Market Data**: Fetches the latest NIFTY 50 spot price from **Yahoo Finance**.
+- **Historical Volatility**: Calculates annualized historical volatility from the past year of data.
+- **Customizable**: Easily update strike price and expiration date directly in the script.
+- **Real-Time Analysis**: Get the most recent option price with a single run.
 
-Requirements
-All required Python libraries are listed in the requirements.txt file.
+---
 
-Python 3.x
+## 📦 Requirements
 
-numpy
+- **Python 3.x**
+- **Dependencies** (listed in `requirements.txt`):
+  - `numpy`
+  - `scipy`
+  - `yfinance`
 
-scipy
+---
 
-yfinance
+## ⚙️ Setup
 
-Setup
-Clone the repository or download the files.
-
-Create a virtual environment (recommended):
+1. **Clone the repository** or download the files:
+   ```bash
+   git clone https://github.com/yourusername/nifty50-option-pricer.git
+   cd nifty50-option-pricer
 
 python -m venv venv
-source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-
-
-Install the dependencies:
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 pip install -r requirements.txt
 
 
-How to Run the Script
-Configure the option parameters inside the option_pricer.py script. You can set the STRIKE_PRICE and EXPIRATION_DATE to match the option you want to analyze.
 
-# Example configuration
+How to Run
+
+Configure the option parameters in option_pricer.py:
+
 STRIKE_PRICE = 24000.0
 EXPIRATION_DATE = date(2025, 8, 28)
 
-
-Execute the script from your terminal:
-
-python option_pricer.py
-
-
-The script will output the analysis, including all the model inputs and the final theoretical option price.
+Example Outcomes 
 
 --- NIFTY 50 Option Pricing Analysis ---
 Date: 2024-08-13
@@ -57,6 +55,4 @@ Strike Price (K): 24000.00
 Days to Expiration: 380
 Risk-Free Rate (r): 7.00%
 Annualized Volatility (sigma): 14.50%
-------------------------------------------
 Theoretical Call Option Price: ₹ 2245.78
-
